@@ -14,7 +14,7 @@
         sParameterName = sURLVariables[i].split('=');
 
         if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
+            return sParameterName[1] === undefined ? true : sParameterName[1].replace('+',' ');
         }
     }
 };
@@ -28,50 +28,55 @@ font-size:24px;
 </style>
 </head>
 <body>
-<center><h1>Your custom Cait/Chris WedLib</h1></center>
+<center><h1 id='title'>A Custom Cait/Chris WedLib</h1></center>
 <p>
-My <b><span id='w1'>_____________</span></b> Chris,<br />
+My <b><u><span id='w1'>_____________</span></u></b> Chris,<br />
 <br />
-From the moment I laid my <b><span id='w2'>______________</span></b> on you at the pizza 
+From the moment I laid my <b><u><span id='w2'>______________</span></u></b> on you at the pizza 
 
 parlor, I knew you were the one for me. I remember the whole 
 
-<b><span id='w3'>_____________</span></b> vividly- You  wore your <b><span id='w4'>_____________</span></b> 
+<b><u><span id='w3'>_____________</span></u></b> vividly- You  wore your <b><u><span id='w4'>_____________</span></u></b> 
 
-<b><span id='w5'>_____________</span></b>, and ordered the <b><span id='w6'>_____________</span></b> 
+<b><u><span id='w5'>_____________</span></u></b>, and ordered the <b><u><span id='w6'>_____________</span></u></b> 
 
-pizza, with a <b><span id='w7'>_____________</span></b>.  Then we went to  
+pizza, with a <b><u><span id='w7'>_____________</span></u></b>.  Then we went to  
 
-<b><span id='w8'>_____________</span></b> to bowl a few sets. I was so 
+<b><u><span id='w8'>_____________</span></u></b> to bowl a few sets. I was so 
 
-<b><span id='w9'>_____________</span></b>  that you might not appreciate how 
+<b><u><span id='w9'>_____________</span></u></b>  that you might not appreciate how 
 
-<b><span id='w10'>_____________</span></b> I was, so I decided to stick a <b><span id='w11'>_____________</span></b>  
+<b><u><span id='w10'>_____________</span></u></b> I was, so I decided to stick a <b><u><span id='w11'>_____________</span></u></b>  
 
-in my hair to see how you would react. <b><span id='w12'>_____________</span></b>! 
+in my hair to see how you would react. <b><u><span id='w12'>_____________</span></u></b>! 
 
-You told me how <b><span id='w13'>_____________</span></b> it looked, so I 
+You told me how <b><u><span id='w13'>_____________</span></u></b> it looked, so I 
 
-<b><span id='w14'>_____________</span></b>  it for the rest of the evening. 
+<b><u><span id='w14'>_____________</span></u></b>  it for the rest of the evening. 
 
-We’ve had so many wonderful <b><span id='w15'>_____________</span></b> since that night. 
+We’ve had so many wonderful <b><u><span id='w15'>_____________</span></u></b> since that night. 
 
-We’ve gone to see many <b><span id='w16'>_____________</span></b> cover shows and 
+We’ve gone to see many <b><u><span id='w16'>_____________</span></u></b> cover shows and 
 
-<b><span id='w17'>_____________</span></b> shows together. We’ve ventured off to 
+<b><u><span id='w17'>_____________</span></u></b> shows together. We’ve ventured off to 
 
-<b><span id='w18'>_____________</span></b>, and got teased by our <b><span id='w19'>_____________</span></b> that we got hitched. 
-We’ve made a <b><span id='w20'>_____________</span></b> home 
+<b><u><span id='w18'>_____________</span></u></b>, and got teased by our <b><u><span id='w19'>_____________</span></u></b> that we got hitched. 
 
-with our  <b><span id='w21'>_____________</span></b> dogs, and 2 <b><span id='w22'>_____________</span></b>.
+We’ve made a <b><u><span id='w20'>_____________</span></u></b> home 
 
-I <b><span id='w23'>_____________</span></b> forward to the many <b><span id='w24'>_____________</span></b> 
+with our  <b><u><span id='w21'>_____________</span></u></b> dogs, and 2 <b><u><span id='w22'>_____________</span></u></b>.
 
-we have ahead of us. And I want to thank <b><span id='w25'>_____________</span></b> and <b><span id='w26'>_____________</span></b> for bringing us 
+I <b><u><span id='w23'>_____________</span></u></b> forward to the many <b><u><span id='w24'>_____________</span></u></b> 
 
-together over <b><span id='w27'>_____________</span></b> so long ago.
+we have ahead of us. And I want to thank <b><u><span id='w25'>_____________</span></u></b> and <b><u><span id='w26'>_____________</span></u></b> for bringing us 
+
+together over <b><u><span id='w27'>_____________</span></u></b> so long ago.
 </p>
-
+<br />
+<br />
+<p>
+<center><h4><a href='/'>Create another WedLib</a></h4></center>
+</p>
 <script type='text/javascript'>
 
 $( document ).ready(function() {
@@ -79,7 +84,6 @@ $( document ).ready(function() {
 var w1 = getUrlParameter('w1');
 var w2 = getUrlParameter('w2');
 var w3 = getUrlParameter('w3');
-
 var w4 = getUrlParameter('w4');
 var w5 = getUrlParameter('w5');
 var w6 = getUrlParameter('w6');
@@ -102,6 +106,9 @@ var w22 = getUrlParameter('w22');
 var w23 = getUrlParameter('w23');
 var w24 = getUrlParameter('w24');
 var w25 = getUrlParameter('w25');
+var w26 = getUrlParameter('w26');
+var w27 = getUrlParameter('w27');
+var title = getUrlParameter('title');
 
 	$('#w1').html(w1);
 	$('#w2').html(w2);
@@ -128,7 +135,8 @@ var w25 = getUrlParameter('w25');
 	$('#w23').html(w23);
 	$('#w24').html(w24);
     $('#w25').html(w25);
-    
+    $('#w26').html(w26);
+    $('#w27').html(w27);
 });
 </script>
 </body>
