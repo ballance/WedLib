@@ -3,6 +3,11 @@
 ## Intro
 This morning my wife asked me to fix our printer so that she could print out these MadLib style forms for a bachelorette party activity.  I hate printers, seriously they stab at my soul, so I decided to automate the process instead.  This is the result.
 
+## Installation
+ - Clone the repo to a directory where you have permissions.  This can be anywhere really.
+ - run `startup.sh`
+ - Open a web browser to the location indicated by `startup.sh` probably `http://localhost:1031`
+
 ## Technologies
  - HTML
  - jQuery (I was in a hurry, this could easily be removed)
