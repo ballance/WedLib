@@ -25,10 +25,22 @@
 p {
 font-size:24px;
 }
+
+#outer {
+width:100%;
+}
+
+#inner {
+    width: 50%;
+    margin: 0 auto;
+}
 </style>
 </head>
 <body>
-<center><h1 id='title'>A Custom Cait/Chris WedLib</h1></center>
+<center><h1 id='title'>A Custom Cait/Chris WedLib by <span id='author'>?</span></h1></center>
+
+<div id='outer'>
+<div id='inner'>
 <p>
 My <b><u><span id='w1'>_____________</span></u></b> Chris,<br />
 <br />
@@ -75,6 +87,8 @@ together over <b><u><span id='w27'>_____________</span></u></b> so long ago.
 <br />
 <br />
 <p>
+</div>
+</div>
 <center><h4><a href='/'>Create another WedLib</a></h4></center>
 </p>
 <script type='text/javascript'>
@@ -109,6 +123,7 @@ var w25 = getUrlParameter('w25');
 var w26 = getUrlParameter('w26');
 var w27 = getUrlParameter('w27');
 var title = getUrlParameter('title');
+var author = getUrlParameter('author');
 
 	$('#w1').html(w1);
 	$('#w2').html(w2);
@@ -137,6 +152,8 @@ var title = getUrlParameter('title');
     $('#w25').html(w25);
     $('#w26').html(w26);
     $('#w27').html(w27);
+    $('#author').html(author);
+    
 });
 </script>
 </body>

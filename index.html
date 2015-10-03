@@ -2,14 +2,45 @@
 <head>
 <title>WedLib - fun vows mad-lib style</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<style>
+p {
+font-size:24px;
+}
+
+td {
+padding:9px;
+}
+
+#outer {
+width:100%;
+}
+
+#inner {
+    width: 50%;
+    margin: 0 auto;
+}
+</style>
 </head>
 
 <body>
+<center><h1>Create a WedLib</h1></center>
+<div id='outer'>
+<div id='inner'>
 <form method='get' action='/caitChrisMadLib.html'>
   <input type='hidden' name='title' value='Your Custom Cait/Chris WedLib'>
-  <input type='hidden' name='author' value=''>
 <input type='hidden' name='7' value='{!5}'>
-  <table border='0' style='font-size: 10pt;'>
+  <table border='0' style='font-size: 16pt;margin:5px;padding:5px'>
+    <tr>
+      <td align='right'>Your name</td>
+      <td align='left'>
+        <input type='text' name='author' id='w1'>
+      </td>
+      <td align='left'>
+      </td>
+    </tr>
+    <tr>
+    <td>&nbsp;</td>
+    </tr>
     <tr>
       <td align='right'>Adjective</td>
       <td align='left'>
@@ -243,5 +274,7 @@
     </tr>
   </table>
 </form>
+</div>
+</div>
 </body>
 </html>
